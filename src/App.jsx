@@ -5,13 +5,22 @@ function App() {
   const [manga, setManga] = useState([]);
 
   const addManga = (title) => {
-    console.log('Add manga called:', title);
+    const updatedManga = [
+      ...manga,
+      {
+        id: crypto.randomUUID(),
+        title,
+      },
+    ];
+    setManga(updatedManga);
   };
 
   return (
     <div>
-      <MangaAdd onCreate={addManga} />
+      {manga.length}
+      <MangaAdd onAdd={addManga} />
     </div>
   );
 }
+
 export default App;
