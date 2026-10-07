@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import MangaAdd from './components/MangaAdd';
+import MangaList from './components/MangaList';
 
 function App() {
   const [manga, setManga] = useState([]);
@@ -17,8 +18,8 @@ function App() {
 
   return (
     <div>
-      {manga.length}
       <MangaAdd onAdd={addManga} />
+      <MangaList manga={manga} />
     </div>
   );
 }
