@@ -1,5 +1,20 @@
+import { useState } from 'react';
+
 function MangaCard({ manga }) {
-  return <div>{manga.title}</div>;
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div>
+        <div>{manga.title}</div>
+        <div>{manga.author}</div>
+      </div>
+      {hovered && <button>Edit</button>}
+    </div>
+  );
 }
 
 export default MangaCard;

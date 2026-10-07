@@ -5,12 +5,13 @@ import MangaList from './components/MangaList';
 function App() {
   const [manga, setManga] = useState([]);
 
-  const addManga = (title) => {
+  const addManga = (title, author) => {
     const updatedManga = [
       ...manga,
       {
         id: crypto.randomUUID(),
         title,
+        author,
       },
     ];
     setManga(updatedManga);
