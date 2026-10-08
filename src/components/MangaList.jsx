@@ -1,9 +1,11 @@
 import MangaCard from './MangaCard';
-import './MangaList.css';
+import '../css/MangaList.css';
 
-function MangaList({ manga }) {
+function MangaList({ manga, onDelete }) {
   const renderedManga = manga.map((item) => {
-    return <MangaCard key={item.id} manga={item} />;
+    return (
+      <MangaCard key={item.id} manga={item} onDelete={onDelete} />
+    );
   });
 
   return <div className="manga-list">{renderedManga}</div>;

@@ -1,21 +1,24 @@
 import { useState } from 'react';
 import MangaAdd from './components/MangaAdd';
-import MangaList from './components/MangaList';
-import './App.css';
+import MangaSearch from './components/MangaSearch';
+import './css/App.css';
 
 function App() {
   const [manga, setManga] = useState([]);
 
   const addManga = (title, author) => {
-    const updatedManga = [
-      ...manga,
+    setManga((prev) => [
+      ...prev,
       {
         id: crypto.randomUUID(),
         title,
         author,
       },
-    ];
-    setManga(updatedManga);
+    ]);
+  };
+
+  const deleteManga = (id) => {
+    setManga((prev) => prev.filter((item) => item.id !== id));
   };
 
   return (
@@ -27,7 +30,7 @@ function App() {
         </div>
         <div className="app-layout-right">
           <h2>MANGA</h2>
-          <MangaList manga={manga} />
+          <MangaSearch manga={manga} onDelete={deleteManga} />
         </div>
       </div>
     </div>

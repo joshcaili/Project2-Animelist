@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import './MangaCard.css';
+import MangaDelete from './MangaDelete';
+import '../css/MangaCard.css';
 
-function MangaCard({ manga }) {
+function MangaCard({ manga, onDelete }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -14,8 +15,7 @@ function MangaCard({ manga }) {
       <div className="author">{manga.author}</div>
       {hovered && (
         <div className="hoverActions">
-          <button className="edit">Edit</button>
-          <button className="delete" >Delete</button>
+          <MangaDelete id={manga.id} onDelete={onDelete} />
         </div>
       )}
     </div>

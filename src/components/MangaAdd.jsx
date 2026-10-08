@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './MangaAdd.css';
+import '../css/MangaAdd.css';
 
 function MangaAdd({ onAdd }) {
   const [title, setTitle] = useState('');
