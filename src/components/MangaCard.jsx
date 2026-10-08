@@ -1,18 +1,23 @@
 import { useState } from 'react';
+import './MangaCard.css';
 
 function MangaCard({ manga }) {
   const [hovered, setHovered] = useState(false);
 
   return (
     <div
+      className="manga-card"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div>
-        <div>{manga.title}</div>
-        <div>{manga.author}</div>
-      </div>
-      {hovered && <button>Edit</button>}
+      <div className="title">{manga.title}</div>
+      <div className="author">{manga.author}</div>
+      {hovered && (
+        <div className="hoverActions">
+          <button className="edit">Edit</button>
+          <button className="delete" >Delete</button>
+        </div>
+      )}
     </div>
   );
 }

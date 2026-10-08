@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './MangaAdd.css';
 
 function MangaAdd({ onAdd }) {
   const [title, setTitle] = useState('');
@@ -20,7 +21,8 @@ function MangaAdd({ onAdd }) {
   };
 
   return (
-    <div>
+    <div className="manga-add">
+      <h3>Add a Manga</h3>
       <form onSubmit={handleSubmit}>
         <label>Title</label>
         <input value={title} onChange={handleTitleChange} />

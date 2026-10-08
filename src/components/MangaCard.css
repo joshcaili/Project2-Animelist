@@ -1,0 +1,18 @@
+.manga-card {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  position: relative;
+  width: 300px;
+}
+
+.manga-card .title {
+  font-size: 24px;
+}
+
+.manga-card .hoverActions {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}

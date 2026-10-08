@@ -1,0 +1,27 @@
+.manga-add {
+  background-color: #1f0f3d;
+  color: white;
+  padding: 20px;
+}
+
+.manga-add h3 {
+  margin-top: 0;
+}
+
+.manga-add label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.manga-add input {
+  display: block;
+  margin-bottom: 8px;
+  padding: 8px;
+  width: 250px;
+}
+
+.manga-add button {
+  margin-top: 10px;
+  padding: 8px 16px;
+}
