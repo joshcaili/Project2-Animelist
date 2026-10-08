@@ -4,14 +4,13 @@
   padding: 20px;
 }
 
-.manga-add h3 {
-  margin-top: 0;
+.manga-add-label {
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .manga-add label {
   display: block;
-  margin-top: 10px;
-  margin-bottom: 4px;
 }
 
 .manga-add input {

@@ -22,7 +22,8 @@ function MangaAdd({ onAdd }) {
 
   return (
     <div className="manga-add">
-      <h3>Add a Manga</h3>
+      <p className="manga-add-label">QUICK ADD</p>
+      <h2>Add a manga</h2>
       <form onSubmit={handleSubmit}>
         <label>Title</label>
         <input value={title} onChange={handleTitleChange} />
