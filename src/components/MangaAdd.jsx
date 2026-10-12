@@ -5,31 +5,22 @@ function MangaAdd({ onAdd }) {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  const handleTitleChange = (event) => {
-    setTitle(event.target.value);
-  };
-
-  const handleAuthorChange = (event) => {
-    setAuthor(event.target.value);
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    onAdd(title, author);
-    setTitle('');
-    setAuthor('');
+      onAdd(title, author);
+      setTitle('');
+      setAuthor('');
   };
 
   return (
     <div className="manga-add">
-      <p className="manga-add-label">QUICK ADD</p>
-      <h2>Add a manga</h2>
+      <p className="small-title">QUICK ADD</p>
       <form onSubmit={handleSubmit}>
         <label>Title</label>
-        <input value={title} onChange={handleTitleChange} />
+        <input value={title} onChange={(event) => setTitle(event.target.value)} />
         <label>Author</label>
-        <input value={author} onChange={handleAuthorChange} />
-        <button>Add Manga</button>
+        <input value={author} onChange={(event) => setAuthor(event.target.value)} />
+        <button>Add manga</button>
       </form>
     </div>
   );

@@ -1,32 +1,33 @@
 .manga-add {
-  background-color: #1f0f3d;
-  color: white;
-  padding: 20px;
-}
-
-.manga-add-label {
-  font-size: 12px;
-  letter-spacing: 1px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid #dfe6ed;
 }
 
 .manga-add label {
   display: block;
+  margin: 12px 0 5px;
+  font-size: 12px;
 }
 
 .manga-add input {
-  display: block;
-  margin-bottom: 8px;
+  width: 100%;
   padding: 8px;
-  width: 250px;
+  border: 1px solid #cbd5df;
 }
 
 .manga-add button {
-  margin-top: 10px;
-  padding: 8px 16px;
+  margin-top: 14px;
+  padding: 8px 12px;
+  border: 1px solid #4d779a;
+  background: #4d779a;
+  color: white;
   cursor: pointer;
-  border: 1px solid #ccc;
-  background: white;
-  color: #1f0f3d;
+  font-size: 13px;
+  font-weight: bold;
 }
 
-
+.manga-add button:hover {
+  background: white;
+  color: #4d779a;
+}

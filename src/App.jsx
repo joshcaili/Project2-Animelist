@@ -7,32 +7,46 @@ function App() {
   const [manga, setManga] = useState([]);
 
   const addManga = (title, author) => {
-    setManga((prev) => [
-      ...prev,
+    setManga([
+      ...manga,
       {
         id: crypto.randomUUID(),
-        title,
-        author,
+        title: title,
+        author: author,
       },
     ]);
   };
 
   const deleteManga = (id) => {
-    setManga((prev) => prev.filter((item) => item.id !== id));
+    const updatedManga = manga.filter((item) => item.id !== id);
+    setManga(updatedManga);
   };
 
   return (
     <div className="app">
-      <h1>MangaList</h1>
-      <div className="app-layout">
-        <div className="app-layout-left">
+      <header className="top-bar">
+        <p className="logo">Mangalist</p>
+      </header>
+
+      <main className="page-content">
+        <aside className="profile">
+          <div className="avatar">JC</div>
+          <h1>JoshCaiLi</h1>
+
           <MangaAdd onAdd={addManga} />
-        </div>
-        <div className="app-layout-right">
-          <h2>MANGA</h2>
+        </aside>
+
+        <section className="list-area">
+          <div className="list-heading">
+            <div>
+              <p className="small-title">MANGA LIST</p>
+              <h2>Reading</h2>
+            </div>
+            <p className="list-count">{manga.length} entries</p>
+          </div>
           <MangaSearch manga={manga} onDelete={deleteManga} />
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 }
