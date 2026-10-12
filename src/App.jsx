@@ -30,8 +30,8 @@ function App() {
 
       <main className="page-content">
         <aside className="profile">
-          <div className="avatar">JC</div>
-          <h1>JoshCaiLi</h1>
+          <div className="avatar">MR</div>
+          <h1>Manga Reader</h1>
 
           <MangaAdd onAdd={addManga} />
         </aside>

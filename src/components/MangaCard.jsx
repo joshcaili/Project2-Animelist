@@ -11,13 +11,15 @@ function MangaCard({ manga, onDelete }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="title">{manga.title}</div>
-      <div className="author">{manga.author}</div>
-      {hovered && (
-        <div className="hoverActions">
-          <MangaDelete id={manga.id} onDelete={onDelete} />
-        </div>
-      )}
+      <div className="cover">
+        <p>{manga.title}</p>
+      </div>
+      <div className="manga-info">
+        <h3>{manga.title}</h3>
+        <p>{manga.author}</p>
+        <p className="progress">Reading</p>
+      </div>
+      {hovered && <MangaDelete id={manga.id} onDelete={onDelete} />}
     </div>
   );
 }

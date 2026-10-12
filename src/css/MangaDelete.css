@@ -1,11 +1,14 @@
 .manga-delete {
-  padding: 8px 16px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 0;
+  border: 0;
+  background: none;
   cursor: pointer;
-  border: 1px solid #ccc;
-  background: white;
-  color: #1f0f3d;
+  font-size: 20px;
 }
 
 .manga-delete:hover {
-  background: #f0f0f0;
+  color: #b86565;
 }
