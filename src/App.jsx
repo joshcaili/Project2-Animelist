@@ -3,8 +3,17 @@ import MangaAdd from './components/MangaAdd';
 import MangaSearch from './components/MangaSearch';
 import './css/App.css';
 
+const startingManga = [
+  {
+    id: 'naruto-placeholder',
+    title: 'Naruto',
+    author: 'Masashi Kishimoto',
+    image: '/img/naruto.jpg',
+  },
+];
+
 function App() {
-  const [manga, setManga] = useState([]);
+  const [manga, setManga] = useState(startingManga);
 
   const addManga = (title, author) => {
     setManga([

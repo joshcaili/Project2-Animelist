@@ -1,11 +1,16 @@
 import '../css/MangaDelete.css';
 
-function MangaDelete({ id, onDelete }) {
+function MangaDelete({ id, title, onDelete }) {
   return (
-    <button className="manga-delete" onClick={() => onDelete(id)}>
-      x
+    <button
+      className="manga-delete"
+      type="button"
+      aria-label={`Delete ${title}`}
+      onClick={() => onDelete(id)}
+    >
+      ×
     </button>
-);
+  );
 }
 
 export default MangaDelete;

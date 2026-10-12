@@ -17,6 +17,7 @@ function MangaSearch({ manga, onDelete }) {
         <input
           type="search"
           placeholder="Search"
+          aria-label="Search manga"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
